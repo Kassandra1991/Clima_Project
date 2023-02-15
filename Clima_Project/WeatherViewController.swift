@@ -9,9 +9,11 @@ import UIKit
 
 class WeatherViewController: UIViewController {
 
-    @IBOutlet weak var conditionImageView: UIImageView!
-    @IBOutlet weak var temperatureLabel: UILabel!
+    // MARK: - UI
+    
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var conditionalImageView: UIImageView!
+    @IBOutlet weak var temperatureLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
