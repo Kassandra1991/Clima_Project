@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -38,11 +38,11 @@
                                                     <backgroundConfiguration key="background" image="location.circle.fill" catalog="system"/>
                                                 </buttonConfiguration>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-eR-cBh">
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city name" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8w-eR-cBh">
                                                 <rect key="frame" x="54" y="0.0" width="245" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQQ-x8-6No">
                                                 <rect key="frame" x="309" y="0.0" width="44" height="40"/>
@@ -55,6 +55,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="magnifyingglass" catalog="system"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="searchTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yng-xA-Tb8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -122,6 +125,7 @@
                     <connections>
                         <outlet property="cityLabel" destination="NDW-dw-fy1" id="E3m-sB-LLs"/>
                         <outlet property="conditionalImageView" destination="auf-Fu-R0N" id="rdB-Kb-Rc2"/>
+                        <outlet property="searchTextField" destination="b8w-eR-cBh" id="gy1-ZI-MiJ"/>
                         <outlet property="temperatureLabel" destination="3Qr-a2-J40" id="5CZ-4w-Njb"/>
                     </connections>
                 </viewController>
