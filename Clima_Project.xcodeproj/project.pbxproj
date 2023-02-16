@@ -16,6 +16,8 @@
 		03F0F0B1299CFE97004F4269 /* light_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 03F0F0AF299CFE97004F4269 /* light_background.pdf */; };
 		03F0F0B2299CFE97004F4269 /* dark_background.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 03F0F0B0299CFE97004F4269 /* dark_background.pdf */; };
 		03F0F0B4299E35FA004F4269 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0F0B3299E35FA004F4269 /* WeatherManager.swift */; };
+		03F0F0B6299E7BEC004F4269 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0F0B5299E7BEC004F4269 /* WeatherData.swift */; };
+		03F0F0B8299E8D82004F4269 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F0F0B7299E8D82004F4269 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		03F0F0AF299CFE97004F4269 /* light_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = light_background.pdf; path = "../../Clima-iOS13/Clima/light_background.pdf"; sourceTree = "<group>"; };
 		03F0F0B0299CFE97004F4269 /* dark_background.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = dark_background.pdf; path = "../../Clima-iOS13/Clima/dark_background.pdf"; sourceTree = "<group>"; };
 		03F0F0B3299E35FA004F4269 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		03F0F0B5299E7BEC004F4269 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		03F0F0B7299E8D82004F4269 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				03F0F0B3299E35FA004F4269 /* WeatherManager.swift */,
+				03F0F0B5299E7BEC004F4269 /* WeatherData.swift */,
+				03F0F0B7299E8D82004F4269 /* WeatherModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -174,8 +180,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F0F097299CFE01004F4269 /* AppDelegate.swift in Sources */,
+				03F0F0B6299E7BEC004F4269 /* WeatherData.swift in Sources */,
 				03F0F0AC299CFE5C004F4269 /* WeatherViewController.swift in Sources */,
 				03F0F0B4299E35FA004F4269 /* WeatherManager.swift in Sources */,
+				03F0F0B8299E8D82004F4269 /* WeatherModel.swift in Sources */,
 				03F0F099299CFE01004F4269 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

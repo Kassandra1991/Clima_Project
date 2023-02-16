@@ -58,3 +58,9 @@ extension WeatherViewController: UITextFieldDelegate {
         searchTextField.text = ""
     }
 }
+
+extension WeatherViewController: WeatherManagerDelegate {
+    func didUpdateWeatherTemperature(weather: WeatherModel) {
+        print(weather.tempetarureString)
+    }
+}
