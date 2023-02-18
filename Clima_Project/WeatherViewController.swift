@@ -18,9 +18,11 @@ class WeatherViewController: UIViewController {
     
     var weatherManager = WeatherManager()
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        weatherManager.delegate = self
         searchTextField.delegate = self
     }
     
@@ -32,6 +34,8 @@ class WeatherViewController: UIViewController {
         print(city)
     }
 }
+
+// MARK: - UITextFieldDelegate
 
 extension WeatherViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -59,8 +63,18 @@ extension WeatherViewController: UITextFieldDelegate {
     }
 }
 
+// MARK: - WeatherManagerDelegate
+
 extension WeatherViewController: WeatherManagerDelegate {
-    func didUpdateWeatherTemperature(weather: WeatherModel) {
-        print(weather.tempetarureString)
+    func didFailWithError(_ error: Error) {
+        print(error)
+    }
+    
+    func didUpdateWeatherTemperature(_ weatherManager: WeatherManager,_ weather: WeatherModel) {
+        DispatchQueue.main.async { [self] in
+            temperatureLabel.text = weather.tempetarureString
+            cityLabel.text = weather.cityName
+            conditionalImageView.image = UIImage(systemName: weather.conditionalName)
+        }
     }
 }
